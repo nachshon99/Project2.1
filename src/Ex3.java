@@ -6,13 +6,13 @@ public class Ex3 {
     }
 
     public static String isFormatOfPhoneNumber(String phoneNumber){
-        String phoneNumberToReturn;
+        String PhoneNumberToReturn;
         if(phoneNumber.length() == 10){
             if(phoneNumber.charAt(0)=='0'){
                 if(phoneNumber.charAt(1)=='5') {
                     if (isAllElementsIsNumbers(phoneNumber,2)) {
-                        phoneNumberToReturn = printLettersBeforeIndex(phoneNumber,3) +'-' + printLettersAfterIndex(phoneNumber,3);
-                        return phoneNumberToReturn;
+                        PhoneNumberToReturn = printLettersBeforeIndex(phoneNumber,3) +'-' + printLettersAfterIndex(phoneNumber,3);
+                        return PhoneNumberToReturn;
                     }
                 }
 
@@ -21,10 +21,10 @@ public class Ex3 {
         else if(phoneNumber.length() == 11){
             if(phoneNumber.charAt(0)=='0' && phoneNumber.charAt(1) == '5' ) {
                 if(phoneNumber.charAt(3) =='-') {
-                    phoneNumberToReturn = printLettersBeforeIndex(phoneNumber,3) + printLettersAfterIndex(phoneNumber,4);
-                    if(isAllElementsIsNumbers(phoneNumberToReturn,2)){
-                        phoneNumberToReturn = phoneNumber;
-                        return phoneNumberToReturn;
+                    PhoneNumberToReturn = printLettersBeforeIndex(phoneNumber,3) + printLettersAfterIndex(phoneNumber,4);
+                    if(isAllElementsIsNumbers(numberToReturn,2)){
+                        PhoneNumberToReturn = phoneNumber;
+                        return PhoneNumberToReturn;
                     }
                 }
             }
@@ -32,8 +32,8 @@ public class Ex3 {
         else if(phoneNumber.length() ==12){
             if(phoneNumber.charAt(0) =='9' && phoneNumber.charAt(1) =='7' && phoneNumber.charAt(2) =='2' && phoneNumber.charAt(3) =='5'){
                 if(isAllElementsIsNumbers(phoneNumber,4)){
-                    phoneNumberToReturn= '0'+ printLettersAfterIndex(printLettersBeforeIndex(phoneNumber,5),3) + '-' + printLettersAfterIndex(phoneNumber,5);
-                    return phoneNumberToReturn;
+                    PhoneNumberToReturn= '0'+ printLettersAfterIndex(printLettersBeforeIndex(phoneNumber,5),3) + '-' + printLettersAfterIndex(phoneNumber,5);
+                    return PhoneNumberToReturn;
                 }
             }
         }
